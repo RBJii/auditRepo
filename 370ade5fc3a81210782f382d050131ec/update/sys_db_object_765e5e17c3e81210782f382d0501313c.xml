@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
     <sys_db_object action="INSERT_OR_UPDATE">
-        <access/>
+        <access>public</access>
         <actions_access>true</actions_access>
         <alter_access>true</alter_access>
         <caller_access/>
@@ -22,14 +22,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-09-15 11:02:22</sys_created_on>
         <sys_id>765e5e17c3e81210782f382d0501313c</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Owners info</sys_name>
         <sys_package display_value="Audit Reports" source="x_1027974_audit_re">370ade5fc3a81210782f382d050131ec</sys_package>
         <sys_policy/>
         <sys_scope display_value="Audit Reports">370ade5fc3a81210782f382d050131ec</sys_scope>
         <sys_update_name>sys_db_object_765e5e17c3e81210782f382d0501313c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-09-15 11:02:25</sys_updated_on>
+        <sys_updated_on>2024-09-15 13:46:37</sys_updated_on>
         <update_access>true</update_access>
         <user_role/>
         <ws_access>true</ws_access>

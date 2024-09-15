@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="765e5e17c3e81210782f382d0501313c" label="Owners info" max_length="40" name="x_1027974_audit_re_owners_info" type="collection">
-        <element attributes="edge_encryption_enabled=true" label="Phone Number" max_length="40" name="phone_number" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Owner Address" max_length="40" name="owner_address" type="string"/>
-        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
-        <element attributes="edge_encryption_enabled=true" label="Room Number" max_length="40" name="room_number" type="string"/>
         <element label="Active" max_length="40" name="active" type="boolean"/>
-        <element attributes="edge_encryption_enabled=true" label="Owners" max_length="40" name="owners" type="string"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element attributes="edge_encryption_enabled=true" label="Owners" max_length="40" name="owners" type="string" unique="true"/>
+        <element attributes="edge_encryption_enabled=true" label="Phone Number" max_length="40" name="phone_number" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Email" max_length="40" name="email" type="string"/>
-        <index name="index">
+        <element attributes="edge_encryption_enabled=true" label="Room Number" max_length="40" name="room_number" type="string"/>
+        <index name="index" unique="true">
+            <element name="owners"/>
+        </index>
+        <index name="index2">
             <element name="sys_class_name"/>
         </index>
     </element>
