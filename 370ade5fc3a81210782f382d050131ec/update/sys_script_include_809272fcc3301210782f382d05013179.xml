@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1027974_audit_re.AuditUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>AuditUtils</name>
+        <script><![CDATA[var AuditUtils = Class.create();
+AuditUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    getActiveStatus: function(sysId) {
+        var gatherOwnerinfo = new GlideRecord('x_1027974_audit_re_owners_info');
+        gatherOwnerinfo.addQuery('sys_id', sysId );
+        gatherOwnerinfo.query();
+        if (gatherOwnerinfo.next()) {
+            var isActive = gatherOwnerinfo.active;
+        }
+        return isActive;
+    },
+
+    type: 'AuditUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-20 04:31:03</sys_created_on>
+        <sys_id>809272fcc3301210782f382d05013179</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AuditUtils</sys_name>
+        <sys_package display_value="Audit Reports" source="x_1027974_audit_re">370ade5fc3a81210782f382d050131ec</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Audit Reports">370ade5fc3a81210782f382d050131ec</sys_scope>
+        <sys_update_name>sys_script_include_809272fcc3301210782f382d05013179</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-20 04:31:03</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>809272fcc3301210782f382d05013179</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-20 04:31:03</sys_created_on>
+        <sys_id>a7b43e70c3701210782f382d05013106</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-20 04:31:03</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

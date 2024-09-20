@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>true</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1027974_audit_re_transaction</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message><![CDATA[<p>Checking for Active Owners information</p>]]></message>
+        <name>Validate Active Owners</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+	var gatherOwnerinfo = new GlideRecord('x_1027974_audit_re_owners_info');
+	gatherOwnerinfo.addQuery('sys_id','7c5c6eb4c3301210782f382d0501316d');
+	gatherOwnerinfo.query();
+	if(gatherOwnerinfo.next()){
+		var isActive = gatherOwnerinfo.active;
+	}
+	if(isActive){
+		gs.addInfoMessage("Owner is active");
+	}else
+	{
+		gs.addErrorMessage('Owner is not active, reach support@support.com');
+		current.setAbortAction(true);
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-20 04:11:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ed4d6238c3301210782f382d05013152</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Validate Active Owners</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Audit Reports" source="x_1027974_audit_re">370ade5fc3a81210782f382d050131ec</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Audit Reports">370ade5fc3a81210782f382d050131ec</sys_scope>
+        <sys_update_name>sys_script_ed4d6238c3301210782f382d05013152</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-20 04:18:21</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=ed4d6238c3301210782f382d05013152"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>ed4d6238c3301210782f382d05013152</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-20 04:11:58</sys_created_on>
+        <sys_id>50607638c3301210782f382d0501314b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-20 04:11:58</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
