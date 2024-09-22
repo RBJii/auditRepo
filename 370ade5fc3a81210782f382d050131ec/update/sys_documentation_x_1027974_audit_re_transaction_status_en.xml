@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="status" label="Status" language="en" table="x_1027974_audit_re_transaction">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>status</element>
+            <help/>
+            <hint/>
+            <label>Status</label>
+            <language>en</language>
+            <name>x_1027974_audit_re_transaction</name>
+            <plural>Status</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-09-22 04:53:41</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Status</sys_name>
+            <sys_package display_value="Audit Reports" source="x_1027974_audit_re">370ade5fc3a81210782f382d050131ec</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Audit Reports">370ade5fc3a81210782f382d050131ec</sys_scope>
+            <sys_update_name>sys_documentation_x_1027974_audit_re_transaction_status_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-09-22 04:53:41</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -12,13 +12,28 @@
 AuditUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
     getActiveStatus: function(sysId) {
+        var sysId = this.getParameter('sysId');
+        //gs.info("+++Balaji inside getActiveStatus: "+ sysId);
         var gatherOwnerinfo = new GlideRecord('x_1027974_audit_re_owners_info');
-        gatherOwnerinfo.addQuery('sys_id', sysId );
+        gatherOwnerinfo.addQuery('sys_id', sysId);
         gatherOwnerinfo.query();
         if (gatherOwnerinfo.next()) {
             var isActive = gatherOwnerinfo.active;
+            //gs.info("+++Balaji inside getActiveStatus if: "+ isActive);
         }
         return isActive;
+    },
+    getEmailinfo: function(sysId) {
+        var sysId = this.getParameter('sysId');
+        gs.info("+++Balaji inside getEmailInfo: "+ sysId);
+        var gatherOwnerinfo = new GlideRecord('x_1027974_audit_re_owners_info');
+        gatherOwnerinfo.addQuery('sys_id', sysId);
+        gatherOwnerinfo.query();
+        if (gatherOwnerinfo.next()) {
+            var emailId = gatherOwnerinfo.email;
+            gs.info("+++Balaji inside getEmailInfo if: "+ emailId);
+        }
+        return emailId;
     },
 
     type: 'AuditUtils'
@@ -27,14 +42,14 @@ AuditUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-09-20 04:31:03</sys_created_on>
         <sys_id>809272fcc3301210782f382d05013179</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>AuditUtils</sys_name>
         <sys_package display_value="Audit Reports" source="x_1027974_audit_re">370ade5fc3a81210782f382d050131ec</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Audit Reports">370ade5fc3a81210782f382d050131ec</sys_scope>
         <sys_update_name>sys_script_include_809272fcc3301210782f382d05013179</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-09-20 04:31:03</sys_updated_on>
+        <sys_updated_on>2024-09-22 04:42:12</sys_updated_on>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>809272fcc3301210782f382d05013179</id>
