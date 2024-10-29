@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="380f9a57c3e81210782f382d050131f4" label="Transaction" max_length="40" name="x_1027974_audit_re_transaction" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Paid by" max_length="40" name="paid_by" reference="x_1027974_audit_re_owners_info" type="reference"/>
-        <element label="Notes" max_length="400" name="notes" type="string"/>
         <element choice="1" label="Status" max_length="40" name="status" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Complete" sequence="300" value="complete"/>
-                <element inactive_on_update="false" label="In Progress" sequence="100" value="in_progress"/>
                 <element inactive_on_update="false" label="Pending" sequence="200" value="pending"/>
+                <element inactive_on_update="false" label="In Progress" sequence="100" value="in_progress"/>
+                <element inactive_on_update="false" label="Complete" sequence="300" value="complete"/>
             </choice>
         </element>
         <element label="Email" max_length="80" name="email" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Payment Date" max_length="40" name="payment_date" type="glide_date_time"/>
+        <element label="Notes" max_length="400" name="notes" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Amount" max_length="40" name="amount" type="string"/>
+        <index name="index">
+            <element name="paid_by"/>
+        </index>
     </element>
 </database>

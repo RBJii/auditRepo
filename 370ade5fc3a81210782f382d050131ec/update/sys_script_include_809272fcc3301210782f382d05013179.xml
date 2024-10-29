@@ -8,6 +8,7 @@
         <description/>
         <mobile_callable>false</mobile_callable>
         <name>AuditUtils</name>
+        <sandbox_callable>true</sandbox_callable>
         <script><![CDATA[var AuditUtils = Class.create();
 AuditUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
